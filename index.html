@@ -1,0 +1,1842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="City Square Spa and Massage in Vancouver offers foot reflexology, body massage, head spa, facial care, aromatherapy, acupuncture, and focused relaxation treatments.">
+  <title>City Square Spa and Massage | Vancouver Spa & Massage</title>
+  <style>
+    :root {
+      --ink: #1f2522;
+      --muted: #5f6b66;
+      --paper: #fbfaf7;
+      --soft: #eef4f0;
+      --mist: #e6f0ee;
+      --green: #173d38;
+      --green-2: #2e665e;
+      --coral: #bf6f44;
+      --amber: #e0b35f;
+      --line: rgba(31, 37, 34, 0.13);
+      --shadow: 0 22px 60px rgba(23, 61, 56, 0.14);
+      --max: 1180px;
+      --radius: 8px;
+      --hero-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1L-0O6Juxasb8QicSAXdnWLSQjLrVvGVr8HPij_dvsgW7cWCeMVBGB-12hqGhPUkx5oA&usqp=CAU");
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      overflow-x: hidden;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    .site-shell {
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, #fbfaf7 0%, #eef4f0 42%, #f7f0e8 72%, #fbfaf7 100%);
+    }
+
+    .nav {
+      position: fixed;
+      z-index: 50;
+      top: 14px;
+      left: 50%;
+      width: min(var(--max), calc(100% - 28px));
+      transform: translateX(-50%);
+      border: 1px solid rgba(255, 255, 255, 0.54);
+      border-radius: 8px;
+      background: rgba(23, 61, 56, 0.78);
+      box-shadow: 0 16px 40px rgba(12, 34, 31, 0.18);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      min-height: 62px;
+      padding: 10px 12px 10px 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+      font-weight: 800;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      color: var(--green);
+      background: #f7d78d;
+      font-size: 0.78rem;
+      font-weight: 900;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 2px;
+    }
+
+    .nav-links a {
+      border-radius: 8px;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 0.88rem;
+      font-weight: 700;
+      padding: 10px 11px;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.14);
+      outline: none;
+    }
+
+    .nav-cta {
+      margin-left: 6px;
+      color: var(--ink) !important;
+      background: #f7d78d;
+    }
+
+    .mobile-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 0;
+      border-radius: 8px;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.14);
+      cursor: pointer;
+    }
+
+    .mobile-toggle span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      margin: 5px auto;
+      background: currentColor;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+
+    body.menu-open .mobile-toggle span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    body.menu-open .mobile-toggle span:nth-child(2) {
+      opacity: 0;
+    }
+
+    body.menu-open .mobile-toggle span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .section {
+      position: relative;
+      padding: 96px 22px;
+      overflow: hidden;
+    }
+
+    .container {
+      width: min(var(--max), 100%);
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--coral);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      background: currentColor;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 700;
+      letter-spacing: 0;
+      color: var(--ink);
+    }
+
+    h1 {
+      max-width: 780px;
+      margin-top: 18px;
+      color: #fff;
+      font-size: 5rem;
+      line-height: 0.98;
+    }
+
+    h2 {
+      max-width: 800px;
+      margin-top: 14px;
+      font-size: 3.6rem;
+      line-height: 1.02;
+    }
+
+    h3 {
+      font-size: 1.45rem;
+      line-height: 1.2;
+    }
+
+    p {
+      line-height: 1.72;
+    }
+
+    .lead {
+      max-width: 730px;
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .hero {
+      min-height: 88svh;
+      display: grid;
+      align-items: center;
+      padding: 122px 22px 70px;
+      isolation: isolate;
+      background: var(--green);
+    }
+
+    .hero-bg,
+    .hero-bg-next {
+      position: absolute;
+      inset: -8%;
+      z-index: -3;
+      background-image: var(--hero-image);
+      background-position: center;
+      background-size: cover;
+      transform: translateY(calc(var(--scroll-y, 0) * 0.12px)) scale(1.08);
+      transition: opacity 1s ease;
+      will-change: transform, opacity;
+    }
+
+    .hero-bg-next {
+      opacity: 0;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background:
+        linear-gradient(90deg, rgba(11, 31, 29, 0.88) 0%, rgba(11, 31, 29, 0.6) 46%, rgba(11, 31, 29, 0.2) 100%),
+        linear-gradient(180deg, rgba(11, 31, 29, 0.2), rgba(11, 31, 29, 0.82));
+    }
+
+    .hero-content {
+      width: min(var(--max), 100%);
+      margin: 0 auto;
+      color: #fff;
+      transform: translateY(calc(var(--scroll-y, 0) * -0.04px));
+      will-change: transform;
+    }
+
+    .hero .eyebrow {
+      color: #f7d78d;
+    }
+
+    .hero-copy {
+      max-width: 650px;
+      margin-top: 22px;
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 1.15rem;
+      line-height: 1.76;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      border: 0;
+      border-radius: 8px;
+      padding: 13px 18px;
+      cursor: pointer;
+      font-weight: 900;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+      will-change: transform;
+    }
+
+    .btn-primary {
+      color: #17201d;
+      background: #f7d78d;
+      box-shadow: 0 18px 38px rgba(0, 0, 0, 0.22);
+    }
+
+    .btn-secondary {
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.42);
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      transform: translateY(-3px);
+      outline: none;
+    }
+
+    .hero-facts {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      max-width: 840px;
+      margin-top: 44px;
+    }
+
+    .hero-fact {
+      min-height: 96px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 8px;
+      padding: 16px;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(14px);
+    }
+
+    .hero-fact strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #f7d78d;
+      font-size: 1.02rem;
+    }
+
+    .hero-fact span {
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+
+    .intro-strip {
+      padding: 26px 22px;
+      background: var(--green);
+      color: #fff;
+    }
+
+    .intro-strip .container {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr 0.8fr;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .strip-item {
+      min-height: 82px;
+      border-left: 3px solid #f7d78d;
+      padding: 8px 0 8px 18px;
+    }
+
+    .strip-item strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 1.04rem;
+    }
+
+    .strip-item span {
+      color: rgba(255, 255, 255, 0.76);
+      line-height: 1.55;
+      font-size: 0.94rem;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 36px;
+      align-items: stretch;
+      margin-top: 42px;
+    }
+
+    .about-media {
+      min-height: 530px;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .about-media img {
+      transform: translateY(calc(var(--scroll-y, 0) * -0.025px)) scale(1.08);
+      transform-origin: center;
+      will-change: transform;
+    }
+
+    .about-panel {
+      display: grid;
+      align-content: center;
+      gap: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 34px;
+      background: rgba(255, 255, 255, 0.72);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+    }
+
+    .about-panel p {
+      color: var(--muted);
+    }
+
+    .values {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .value {
+      min-height: 118px;
+      border: 1px solid rgba(23, 61, 56, 0.16);
+      border-radius: 8px;
+      padding: 18px;
+      background: var(--soft);
+    }
+
+    .value strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--green);
+    }
+
+    .value span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.55;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 34px;
+    }
+
+    .section-note {
+      max-width: 360px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .services {
+      background: linear-gradient(180deg, #eef4f0 0%, #fbfaf7 100%);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .service-card,
+    .offer-card,
+    .review-card,
+    .faq-item,
+    .booking-card,
+    .contact-card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: 0 18px 50px rgba(23, 61, 56, 0.09);
+    }
+
+    .spotlight::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      opacity: 0;
+      pointer-events: none;
+      background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(191, 111, 68, 0.2), transparent 34%);
+      transition: opacity 0.25s ease;
+    }
+
+    .spotlight:hover::before {
+      opacity: 1;
+    }
+
+    .service-card > *,
+    .offer-card > *,
+    .review-card > *,
+    .faq-item > *,
+    .booking-card > *,
+    .contact-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .service-media {
+      position: relative;
+      height: 230px;
+      overflow: hidden;
+      background: var(--green);
+    }
+
+    .service-media img {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transform: scale(1.04);
+      transition: opacity 0.8s ease, transform 2s ease;
+    }
+
+    .service-media img.active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .service-body {
+      padding: 20px;
+    }
+
+    .service-topline {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .price-chip {
+      flex: 0 0 auto;
+      border-radius: 8px;
+      padding: 7px 10px;
+      color: #fff;
+      background: var(--green);
+      font-size: 0.9rem;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .service-desc {
+      min-height: 104px;
+      color: var(--muted);
+      font-size: 0.96rem;
+      line-height: 1.68;
+    }
+
+    .durations {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .duration-pill {
+      border: 1px solid rgba(23, 61, 56, 0.16);
+      border-radius: 8px;
+      padding: 8px 10px;
+      color: var(--green);
+      background: #f6fbf8;
+      font-size: 0.88rem;
+      font-weight: 800;
+    }
+
+    .offers {
+      display: grid;
+      grid-template-columns: 0.75fr 1.25fr;
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .offer-card {
+      padding: 24px;
+    }
+
+    .offer-card h3 {
+      margin-bottom: 12px;
+    }
+
+    .offer-card p,
+    .combo-list li {
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .combo-list {
+      display: grid;
+      gap: 10px;
+      list-style: none;
+    }
+
+    .combo-list li {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 10px;
+    }
+
+    .combo-list li:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .combo-list strong {
+      color: var(--green);
+    }
+
+    .booking {
+      background: var(--green);
+      color: #fff;
+    }
+
+    .booking h2,
+    .booking .lead,
+    .booking .eyebrow {
+      color: #fff;
+    }
+
+    .booking .lead {
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .booking-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 22px;
+      align-items: start;
+      margin-top: 38px;
+    }
+
+    .booking-card {
+      padding: 26px;
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 28px 80px rgba(0, 0, 0, 0.18);
+      backdrop-filter: blur(14px);
+    }
+
+    .booking-card h3 {
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .booking-points {
+      display: grid;
+      gap: 12px;
+      list-style: none;
+    }
+
+    .booking-points li {
+      display: flex;
+      gap: 12px;
+      color: rgba(255, 255, 255, 0.78);
+      line-height: 1.55;
+    }
+
+    .booking-points li::before {
+      content: "";
+      flex: 0 0 auto;
+      width: 10px;
+      height: 10px;
+      margin-top: 7px;
+      border-radius: 50%;
+      background: #f7d78d;
+    }
+
+    .booking-form {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .field {
+      display: grid;
+      gap: 8px;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 0.88rem;
+      font-weight: 800;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 8px;
+      padding: 13px 12px;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.12);
+      outline: none;
+      transition: border 0.2s ease, background 0.2s ease;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: rgba(255, 255, 255, 0.54);
+    }
+
+    select option {
+      color: var(--ink);
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #f7d78d;
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    textarea {
+      min-height: 104px;
+      resize: vertical;
+    }
+
+    .booking-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      grid-column: 1 / -1;
+      margin-top: 4px;
+    }
+
+    .booking-status {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.92rem;
+    }
+
+    .gallery {
+      background: #fbfaf7;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.55fr;
+      gap: 22px;
+      align-items: stretch;
+      margin-top: 38px;
+    }
+
+    .gallery-frame {
+      position: relative;
+      min-height: 540px;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      background: var(--green);
+    }
+
+    .gallery-frame img {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transform: scale(1.04);
+      transition: opacity 0.8s ease, transform 1.4s ease;
+    }
+
+    .gallery-frame img.active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .gallery-caption {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      border-radius: 8px;
+      padding: 18px;
+      color: #fff;
+      background: rgba(13, 35, 32, 0.76);
+      backdrop-filter: blur(14px);
+    }
+
+    .gallery-caption strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 1.15rem;
+    }
+
+    .gallery-side {
+      display: grid;
+      gap: 14px;
+    }
+
+    .mini-photo {
+      min-height: 160px;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 16px 42px rgba(23, 61, 56, 0.1);
+      cursor: pointer;
+      border: 2px solid transparent;
+      background: var(--green);
+    }
+
+    .mini-photo.active {
+      border-color: var(--coral);
+    }
+
+    .reviews {
+      background: linear-gradient(180deg, #e6f0ee 0%, #f6efe7 100%);
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .reviews .container {
+      padding: 0 22px;
+    }
+
+    .review-marquee {
+      display: grid;
+      gap: 16px;
+      margin-top: 38px;
+      overflow: hidden;
+    }
+
+    .review-track {
+      display: flex;
+      gap: 16px;
+      width: max-content;
+      animation: scrollLeft 42s linear infinite;
+    }
+
+    .review-track.reverse {
+      animation-name: scrollRight;
+      transform: translateX(-50%);
+    }
+
+    .review-marquee:hover .review-track {
+      animation-play-state: paused;
+    }
+
+    .review-card {
+      width: 340px;
+      min-height: 190px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.88);
+    }
+
+    .review-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+      color: var(--green);
+      font-weight: 900;
+    }
+
+    .score {
+      color: var(--coral);
+      font-size: 0.9rem;
+    }
+
+    .review-card p {
+      color: var(--muted);
+      font-size: 0.96rem;
+      line-height: 1.62;
+    }
+
+    @keyframes scrollLeft {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    @keyframes scrollRight {
+      from { transform: translateX(-50%); }
+      to { transform: translateX(0); }
+    }
+
+    .faq-contact {
+      background: #fbfaf7;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 26px;
+      align-items: start;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .faq-item {
+      background: #fff;
+    }
+
+    .faq-question {
+      width: 100%;
+      min-height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      border: 0;
+      padding: 18px 20px;
+      color: var(--ink);
+      background: transparent;
+      cursor: pointer;
+      text-align: left;
+      font-weight: 900;
+    }
+
+    .faq-question span {
+      flex: 0 0 auto;
+      width: 26px;
+      height: 26px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      color: #fff;
+      background: var(--green);
+      transition: transform 0.25s ease;
+    }
+
+    .faq-item.open .faq-question span {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .faq-answer p {
+      padding: 0 20px 20px;
+      color: var(--muted);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 18px;
+      margin-top: 42px;
+    }
+
+    .contact-card {
+      padding: 24px;
+      background: #fff;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 16px;
+      margin-top: 16px;
+      list-style: none;
+    }
+
+    .contact-list li {
+      display: grid;
+      gap: 5px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .contact-list strong {
+      color: var(--green);
+    }
+
+    .map-card {
+      min-height: 430px;
+      overflow: hidden;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      background: var(--soft);
+    }
+
+    .map-card iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 430px;
+      border: 0;
+      display: block;
+    }
+
+    footer {
+      padding: 28px 22px 38px;
+      color: rgba(255, 255, 255, 0.75);
+      background: var(--green);
+      text-align: center;
+      font-size: 0.92rem;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(34px);
+      transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .parallax-soft {
+      will-change: transform;
+      transform: translateY(calc(var(--scroll-y, 0) * -0.015px));
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.001ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    @media (max-width: 1020px) {
+      h1 {
+        font-size: 3.7rem;
+      }
+
+      h2 {
+        font-size: 2.8rem;
+      }
+
+      .nav-links {
+        position: fixed;
+        inset: 78px 14px auto 14px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        border-radius: 8px;
+        padding: 12px;
+        background: rgba(23, 61, 56, 0.96);
+        box-shadow: var(--shadow);
+      }
+
+      body.menu-open .nav-links {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 14px 16px;
+      }
+
+      .nav-cta {
+        margin-left: 0;
+      }
+
+      .mobile-toggle {
+        display: block;
+      }
+
+      .hero-facts,
+      .intro-strip .container,
+      .about-grid,
+      .booking-grid,
+      .gallery-grid,
+      .faq-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .offers {
+        grid-template-columns: 1fr;
+      }
+
+      .about-media,
+      .gallery-frame {
+        min-height: 420px;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .section {
+        padding: 72px 16px;
+      }
+
+      .hero {
+        min-height: 86svh;
+        padding: 102px 16px 48px;
+      }
+
+      h1 {
+        font-size: 2.55rem;
+        line-height: 1.04;
+      }
+
+      h2 {
+        font-size: 2.1rem;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+      }
+
+      .hero-copy,
+      .lead {
+        font-size: 1rem;
+      }
+
+      .brand {
+        max-width: 230px;
+      }
+
+      .brand-text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .hero-actions,
+      .booking-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .hero-facts,
+      .values,
+      .service-grid,
+      .booking-form {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .section-note {
+        margin-top: 14px;
+      }
+
+      .about-panel,
+      .booking-card,
+      .contact-card,
+      .offer-card {
+        padding: 20px;
+      }
+
+      .service-media {
+        height: 210px;
+      }
+
+      .combo-list li {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+
+      .review-card {
+        width: 288px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="site-shell">
+    <nav class="nav" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a class="brand" href="#home" aria-label="City Square Spa and Massage home">
+          <span class="brand-mark">CS</span>
+          <span class="brand-text">City Square Spa and Massage</span>
+        </a>
+        <button class="mobile-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+          <a class="nav-cta" href="sms:+17788581889">Text 778-858-1889</a>
+        </div>
+      </div>
+    </nav>
+
+    <header id="home" class="hero section">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-bg-next" aria-hidden="true"></div>
+      <div class="hero-content reveal">
+        <span class="eyebrow">Vancouver spa and massage</span>
+        <h1>City Square Spa and Massage</h1>
+        <p class="hero-copy">Find a quiet pause in the heart of City Square. Our private treatment rooms, focused touch, and extended daily hours make it easy to reset after work, travel, training, or a long week.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary magnetic" href="sms:+17788581889">Book Now</a>
+          <a class="btn btn-secondary magnetic" href="tel:+17788581889">Call 778-858-1889</a>
+        </div>
+        <div class="hero-facts" aria-label="Quick store information">
+          <div class="hero-fact">
+            <strong>Open Daily</strong>
+            <span>9:30 AM - 11:00 PM for flexible daytime and evening appointments.</span>
+          </div>
+          <div class="hero-fact">
+            <strong>City Square</strong>
+            <span>Unit 139, Upper Shop 2F, City Square Shopping Centre.</span>
+          </div>
+          <div class="hero-fact">
+            <strong>Transparent Pricing</strong>
+            <span>Taxes and tips are excluded. Packages and combos are available.</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <aside class="intro-strip" aria-label="Store highlights">
+      <div class="container">
+        <div class="strip-item reveal">
+          <strong>Private Treatment Rooms</strong>
+          <span>Clean, quiet spaces designed for calm breathing and full-body ease.</span>
+        </div>
+        <div class="strip-item reveal">
+          <strong>Text to Reserve</strong>
+          <span>Send a quick message to 778-858-1889 with your preferred time.</span>
+        </div>
+        <div class="strip-item reveal">
+          <strong>Buy Ten Get One Free</strong>
+          <span>A simple package option for guests who visit regularly.</span>
+        </div>
+      </div>
+    </aside>
+
+    <section id="about" class="section about">
+      <div class="container">
+        <span class="eyebrow reveal">About the space</span>
+        <h2 class="reveal">A quiet, private spa experience inside City Square.</h2>
+        <div class="about-grid">
+          <div class="about-media reveal">
+            <img src="https://i.pinimg.com/1200x/dc/36/fe/dc36feaf9cc11bec29cc3de7834c539e.jpg" alt="Calm massage treatment room ambience">
+          </div>
+          <div class="about-panel reveal spotlight">
+            <p>City Square Spa and Massage is built around a simple idea: a massage visit should feel effortless from the moment you arrive. The rooms are kept clean, private, and quiet, with a warm atmosphere that helps the body settle before the session begins.</p>
+            <p>Whether you need focused neck and shoulder relief, foot reflexology after a long day, a head spa reset, or a restorative body massage, the experience is designed to feel attentive, unrushed, and easy to book.</p>
+            <div class="values">
+              <div class="value">
+                <strong>Clean</strong>
+                <span>Fresh, tidy treatment rooms and clear appointment flow.</span>
+              </div>
+              <div class="value">
+                <strong>Private</strong>
+                <span>Quiet rooms for guests who want a calm reset.</span>
+              </div>
+              <div class="value">
+                <strong>Restorative</strong>
+                <span>Thoughtful pressure and focused service options.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section services">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow reveal">Services and pricing</span>
+            <h2 class="reveal">Focused care for tired muscles, feet, scalp, skin, and stress.</h2>
+          </div>
+          <p class="section-note reveal">Prices are shown in CAD and exclude taxes and tips. The service list below follows the provided City Square Spa and Massage price menu.</p>
+        </div>
+        <div id="serviceGrid" class="service-grid" aria-live="polite"></div>
+
+        <div class="offers">
+          <div class="offer-card reveal spotlight">
+            <h3>Package</h3>
+            <p><strong>Buy Ten Get One Free.</strong> A practical option for ongoing wellness visits and recurring bodywork.</p>
+          </div>
+          <div class="offer-card reveal spotlight">
+            <h3>Combos</h3>
+            <ul class="combo-list">
+              <li><span><strong>Combo A:</strong> 30 min Foot Reflexology + 60 min Body Massage</span><strong>$129</strong></li>
+              <li><span><strong>Combo B:</strong> 30 min Body Massage + 60 min Head Spa</span><strong>$168</strong></li>
+              <li><span><strong>Combo C:</strong> 60 min Foot Reflexology + 60 min Body Massage</span><strong>$170</strong></li>
+              <li><span><strong>Combo D:</strong> 60 min Body Massage + 60 min Head Spa</span><strong>$198</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section gallery">
+      <div class="container">
+        <span class="eyebrow reveal">Gallery</span>
+        <h2 class="reveal">A visual pause before your appointment.</h2>
+        <p class="lead reveal">A rotating look at the calm, tactile details guests often come in for: foot pressure, bodywork, and facial relaxation.</p>
+        <div class="gallery-grid">
+          <div class="gallery-frame reveal" id="galleryFrame" aria-label="Massage gallery carousel"></div>
+          <div class="gallery-side reveal" id="galleryThumbs" aria-label="Gallery thumbnails"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="section reviews">
+      <div class="container">
+        <span class="eyebrow reveal">Guest reviews</span>
+        <h2 class="reveal">Guests come for relief and return for the calm.</h2>
+        <p class="lead reveal">Two moving rows of recent guest feedback, designed to keep the section lively without getting in the way.</p>
+      </div>
+      <div class="review-marquee" aria-label="Client reviews">
+        <div class="review-track" id="reviewTrackOne"></div>
+        <div class="review-track reverse" id="reviewTrackTwo"></div>
+      </div>
+    </section>
+
+    <section id="faq" class="section faq-contact">
+      <div class="container">
+        <div class="faq-grid">
+          <div>
+            <span class="eyebrow reveal">FAQs</span>
+            <h2 class="reveal">Helpful details before you book.</h2>
+            <p class="lead reveal">A few quick answers for arrival, injuries, cancellations, and parking near City Square.</p>
+          </div>
+          <div class="faq-list reveal" id="faqList"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container">
+        <span class="eyebrow reveal">Contact and location</span>
+        <h2 class="reveal">Visit us at City Square Shopping Centre.</h2>
+        <div class="contact-grid">
+          <div class="contact-card reveal spotlight">
+            <h3>City Square Spa and Massage</h3>
+            <ul class="contact-list">
+              <li>
+                <strong>Address</strong>
+                <span>555 W 12th Ave Unit 139, Vancouver, BC V5Z 3X7, Canada</span>
+                <span>Upper Shop 2F, City Square Shopping Centre</span>
+              </li>
+              <li>
+                <strong>Hours</strong>
+                <span>Daily: 9:30 AM - 11:00 PM</span>
+              </li>
+              <li>
+                <strong>Phone / Text</strong>
+                <a href="tel:+17788581889">778-858-1889</a>
+              </li>
+            </ul>
+            <div class="hero-actions" style="margin-top: 24px;">
+              <a class="btn btn-primary magnetic" href="sms:+17788581889">Text for Booking</a>
+              <a class="btn btn-secondary magnetic" style="color: var(--green); border-color: rgba(23, 61, 56, 0.18); background: #eef4f0;" href="https://www.google.com/maps/search/?api=1&query=555%20W%2012th%20Ave%20Unit%20139%2C%20Vancouver%2C%20BC%20V5Z%203X7%2C%20Canada">Get Directions</a>
+            </div>
+          </div>
+          <div class="map-card reveal">
+            <iframe title="Map to City Square Spa and Massage" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=555%20W%2012th%20Ave%20Unit%20139%2C%20Vancouver%2C%20BC%20V5Z%203X7%2C%20Canada&output=embed"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      City Square Spa and Massage. Prices exclude taxes and tips. Please text 778-858-1889 for booking.
+    </footer>
+  </div>
+
+  <script>
+    const imagePool = {
+      foot: [
+        "https://i.pinimg.com/1200x/6a/df/fe/6adffe5706bdce88dd2d2d0fc6875398.jpg",
+        "https://i.pinimg.com/1200x/71/a4/b7/71a4b75a19fbadf33bc6dc340e91340c.jpg",
+        "https://i.pinimg.com/1200x/2b/85/42/2b8542fd0d099c9771bb5b332d6f51a9.jpg"
+      ],
+      body: [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1L-0O6Juxasb8QicSAXdnWLSQjLrVvGVr8HPij_dvsgW7cWCeMVBGB-12hqGhPUkx5oA&usqp=CAU",
+        "https://i.pinimg.com/1200x/dc/36/fe/dc36feaf9cc11bec29cc3de7834c539e.jpg",
+        "https://i.pinimg.com/736x/4c/2b/cb/4c2bcb39fbc7189277e8e505c2e1bc8f.jpg"
+      ],
+      deep: [
+        "https://i.pinimg.com/736x/86/47/ef/8647ef5b51553a8e57ca32e6b2ec74f0.jpg",
+        "https://i.pinimg.com/736x/a4/c5/f0/a4c5f0fb2704f75aa94a247e18a4af14.jpg",
+        "https://i.pinimg.com/1200x/cb/a2/38/cba2382cc3ca28d467b85d939121c8ef.jpg"
+      ],
+      facial: [
+        "https://images.squarespace-cdn.com/content/v1/5d5f2058a79cbf000111652a/1586842536251-IY8XEBZ4JINBCSKZKAHT/FaceMassage.jpg",
+        "https://i.pinimg.com/1200x/84/cd/b7/84cdb7509c5bacdc80bdf1336985d900.jpg",
+        "https://i.pinimg.com/736x/a7/5e/f0/a75ef039455f894cd59d004e84b09e5a.jpg"
+      ],
+      scalp: [
+        "https://i.pinimg.com/736x/04/62/f3/0462f3dca56fdbf3b7e4236123439bd4.jpg",
+        "https://i.pinimg.com/736x/84/47/cc/8447cce62d187d8966f9fa9f6160658e.jpg",
+        "https://i.pinimg.com/736x/ae/58/7d/ae587d750b57d8172e55607a65e51a54.jpg"
+      ],
+      guasha: [
+        "https://i.pinimg.com/736x/6d/7d/78/6d7d781d25c23f706ec67b36589bf5ae.jpg",
+        "https://i.pinimg.com/1200x/98/b2/ca/98b2ca19c1254a1b9e5b163ecf8f3bb6.jpg",
+        "https://i.pinimg.com/1200x/fe/60/07/fe60073974213c52c26e52e1b0a51e8f.jpg"
+      ],
+      cupping: [
+        "https://i.pinimg.com/1200x/2b/b9/25/2bb925cc8ba1e7ec30b8217e143d0335.jpg",
+        "https://i.pinimg.com/1200x/fa/20/60/fa206044fee8dd38cebed21c4d4f616d.jpg",
+        "https://i.pinimg.com/1200x/72/f0/53/72f053decc513a9d6882798d8689f0e5.jpg"
+      ],
+      oil: [
+        "https://i.pinimg.com/736x/c8/07/c4/c807c4647d26dd39335f13e834586a22.jpg",
+        "https://i.pinimg.com/736x/3f/40/a8/3f40a894a04a10469e8a12e5f8afd4f8.jpg",
+        "https://i.pinimg.com/1200x/45/60/3b/45603b2af0a2b91d6a71314b0585ad1a.jpg"
+      ],
+      hotStone: [
+        "https://i.pinimg.com/736x/6d/7d/78/6d7d781d25c23f706ec67b36589bf5ae.jpg",
+        "https://i.pinimg.com/1200x/98/b2/ca/98b2ca19c1254a1b9e5b163ecf8f3bb6.jpg",
+        "https://i.pinimg.com/1200x/ef/1d/31/ef1d31b8299b7ac8f3bab01a44df9ece.jpg"
+      ],
+      acupuncture: [
+        "https://i.pinimg.com/1200x/2b/b9/25/2bb925cc8ba1e7ec30b8217e143d0335.jpg",
+        "https://i.pinimg.com/1200x/fa/20/60/fa206044fee8dd38cebed21c4d4f616d.jpg",
+        "https://i.pinimg.com/1200x/f2/c8/ce/f2c8ce710d81304f810188885b9c6aa2.jpg"
+      ]
+    };
+
+    const services = [
+      {
+        name: "Foot Reflexology",
+        imageKey: "foot",
+        price: "$48+",
+        durations: [["30 min", "$48"], ["60 min", "$89"]],
+        desc: "Pressure-point foot care for guests who stand, walk, commute, or travel often. Helps tired feet feel lighter while supporting whole-body relaxation."
+      },
+      {
+        name: "Body Massage",
+        imageKey: "body",
+        price: "$48+",
+        durations: [["30 min", "$48"], ["60 min", "$89"], ["90 min", "$129"]],
+        desc: "A restorative body session for everyday tension, stiff backs, sore legs, and mental fatigue. Ideal when you want a reset without overcomplicating the visit."
+      },
+      {
+        name: "Deep Tissue Body Massage",
+        imageKey: "deep",
+        price: "$99",
+        durations: [["60 min", "$99"]],
+        desc: "Firm, focused work for deeper muscle tension. A strong fit for desk workers, gym soreness, chronic tightness, and guests who prefer steady pressure."
+      },
+      {
+        name: "Targeted Body Session",
+        imageKey: "body",
+        price: "$129",
+        durations: [["60 min", "$129"]],
+        desc: "A customized session for specific body areas that need more attention. Useful for recurring knots, postural tension, and concentrated stress patterns."
+      },
+      {
+        name: "Targeted Shoulder & Neck Session",
+        imageKey: "body",
+        price: "$68",
+        durations: [["30 min", "$68"]],
+        desc: "Short and focused care for neck stiffness, shoulder heaviness, and upper-back tension from screen time, driving, or long workdays."
+      },
+      {
+        name: "Hot Stone Scrapping Therapy",
+        imageKey: "guasha",
+        price: "$48",
+        durations: [["30 min", "$48"]],
+        desc: "A warming scraping-style treatment for guests who want quick relief around tight, tired areas. Best for a focused reset when time is limited."
+      },
+      {
+        name: "Hot Stone Spa",
+        imageKey: "hotStone",
+        price: "$99",
+        durations: [["60 min", "$99"]],
+        desc: "Warm stone therapy for deep relaxation and softened muscle tension. A good choice when your body feels cold, stiff, or slow to unwind."
+      },
+      {
+        name: "Lymphatic Detox",
+        imageKey: "body",
+        price: "$128",
+        durations: [["60 min", "$128"]],
+        desc: "Gentle, rhythmic bodywork for guests seeking a lighter, refreshed feeling. Designed for calm circulation support and a softer recovery pace."
+      },
+      {
+        name: "Aromatherapy",
+        imageKey: "oil",
+        price: "$128",
+        durations: [["60 min", "$128"]],
+        desc: "Essential-oil relaxation for stress, fatigue, and sensory overload. Ideal when you want the session to feel soothing, fragrant, and restorative."
+      },
+      {
+        name: "Facial Care",
+        imageKey: "facial",
+        price: "$128",
+        durations: [["60 min", "$128"]],
+        desc: "A calming facial care session for guests who want skin comfort, facial tension relief, and a relaxed glow after a busy day."
+      },
+      {
+        name: "Head Spa",
+        imageKey: "scalp",
+        price: "$128+",
+        durations: [["60 min", "$128"], ["90 min", "$158"]],
+        desc: "Scalp-focused care for head tension, mental fatigue, and stress. A strong choice for guests who want quiet, grounding relaxation."
+      },
+      {
+        name: "Acupuncture",
+        imageKey: "acupuncture",
+        price: "$139",
+        durations: [["60 min", "$139"]],
+        desc: "Focused point-based wellness care for guests looking for a precise, structured session. Please share health concerns before booking."
+      }
+    ];
+
+    const galleryImages = [
+      {
+        src: imagePool.foot[0],
+        title: "Guided foot pressure",
+        copy: "A grounded start for tired feet and busy days."
+      },
+      {
+        src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1L-0O6Juxasb8QicSAXdnWLSQjLrVvGVr8HPij_dvsgW7cWCeMVBGB-12hqGhPUkx5oA&usqp=CAU",
+        title: "Restorative bodywork",
+        copy: "Focused touch for muscle tension and everyday stress."
+      },
+      {
+        src: "https://images.squarespace-cdn.com/content/v1/5d5f2058a79cbf000111652a/1586842536251-IY8XEBZ4JINBCSKZKAHT/FaceMassage.jpg",
+        title: "Facial relaxation",
+        copy: "Soft, quiet care for the face, jaw, and skin."
+      }
+    ];
+
+    const reviews = [
+      ["Maya C.", "The space was quiet and easy to settle into. My shoulder and neck session felt focused, and I left with much better movement."],
+      ["Daniel R.", "Great location inside City Square and very convenient evening hours. The foot reflexology was exactly what I needed after travel."],
+      ["Priya S.", "Clean room, calm music, and clear communication about pressure. The 90-minute body massage was worth making time for."],
+      ["Alex T.", "I booked by text and got a quick reply. The head spa was deeply relaxing and helped clear a tension headache."],
+      ["Sofia L.", "The massage felt professional without feeling rushed. I appreciated the simple pricing and the quiet room."],
+      ["James W.", "Excellent option after work near Broadway-City Hall. Deep tissue pressure was steady and effective."],
+      ["Emily K.", "The facial care session was gentle and relaxing. My jaw and face felt lighter afterward."],
+      ["Noah P.", "The combo is a good value. Foot reflexology followed by body massage made a huge difference after a long week."],
+      ["Hannah B.", "Easy to find in City Square. The aromatherapy session was warm, soothing, and not overpowering."],
+      ["Chris M.", "Friendly booking process and late hours are a big plus. I will return for the package option."]
+    ];
+
+    const faqs = [
+      {
+        q: "How early should I arrive?",
+        a: "Please arrive 5-10 minutes before your appointment so there is enough time to check in, settle, and begin your session without feeling rushed."
+      },
+      {
+        q: "Can I get a massage if I have an injury?",
+        a: "Please tell the spa about injuries, recent surgery, pregnancy, medical conditions, or sensitive areas before your appointment. If you are under medical care, ask your healthcare provider first."
+      },
+      {
+        q: "What is your cancellation policy?",
+        a: "If your plans change, please call or text as early as possible so the appointment time can be offered to another guest."
+      },
+      {
+        q: "Is there parking available?",
+        a: "City Square Shopping Centre has visitor parking options. Availability can vary by time of day, so allow a little extra time if you are driving."
+      }
+    ];
+
+    const heroImages = [
+      imagePool.body[1],
+      imagePool.foot[0],
+      imagePool.facial[0],
+      imagePool.scalp[0]
+    ];
+
+    const serviceGrid = document.getElementById("serviceGrid");
+
+    services.forEach((service) => {
+      const card = document.createElement("article");
+      card.className = "service-card reveal spotlight";
+
+      const media = document.createElement("div");
+      media.className = "service-media";
+      media.setAttribute("aria-label", service.name + " image carousel");
+
+      imagePool[service.imageKey].forEach((src, imageIndex) => {
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = service.name;
+        img.loading = "lazy";
+        if (imageIndex === 0) img.classList.add("active");
+        media.appendChild(img);
+      });
+
+      const body = document.createElement("div");
+      body.className = "service-body";
+      body.innerHTML = `
+        <div class="service-topline">
+          <h3>${service.name}</h3>
+          <span class="price-chip">${service.price}</span>
+        </div>
+        <p class="service-desc">${service.desc}</p>
+        <div class="durations">
+          ${service.durations.map((item) => `<span class="duration-pill">${item[0]} ${item[1]}</span>`).join("")}
+        </div>
+      `;
+
+      card.append(media, body);
+      serviceGrid.appendChild(card);
+    });
+
+    function cycleImages(containerSelector, interval) {
+      document.querySelectorAll(containerSelector).forEach((container, containerIndex) => {
+        const images = Array.from(container.querySelectorAll("img"));
+        if (images.length < 2) return;
+        let activeIndex = 0;
+        setInterval(() => {
+          images[activeIndex].classList.remove("active");
+          activeIndex = (activeIndex + 1) % images.length;
+          images[activeIndex].classList.add("active");
+        }, interval + containerIndex * 180);
+      });
+    }
+
+    cycleImages(".service-media", 3200);
+
+    const heroA = document.querySelector(".hero-bg");
+    const heroB = document.querySelector(".hero-bg-next");
+    let heroIndex = 0;
+    let heroUseA = true;
+
+    function setHeroImage() {
+      heroIndex = (heroIndex + 1) % heroImages.length;
+      const nextImage = `url("${heroImages[heroIndex]}")`;
+      if (heroUseA) {
+        heroB.style.backgroundImage = nextImage;
+        heroB.style.opacity = "1";
+        heroA.style.opacity = "0";
+      } else {
+        heroA.style.backgroundImage = nextImage;
+        heroA.style.opacity = "1";
+        heroB.style.opacity = "0";
+      }
+      heroUseA = !heroUseA;
+    }
+
+    setInterval(setHeroImage, 4600);
+
+    const galleryFrame = document.getElementById("galleryFrame");
+    const galleryThumbs = document.getElementById("galleryThumbs");
+    let galleryIndex = 0;
+
+    galleryImages.forEach((item, index) => {
+      const img = document.createElement("img");
+      img.src = item.src;
+      img.alt = item.title;
+      img.loading = index === 0 ? "eager" : "lazy";
+      if (index === 0) img.classList.add("active");
+      galleryFrame.appendChild(img);
+
+      const thumb = document.createElement("button");
+      thumb.type = "button";
+      thumb.className = "mini-photo" + (index === 0 ? " active" : "");
+      thumb.setAttribute("aria-label", `Show ${item.title}`);
+      thumb.innerHTML = `<img src="${item.src}" alt="">`;
+      thumb.addEventListener("click", () => showGallery(index));
+      galleryThumbs.appendChild(thumb);
+    });
+
+    const caption = document.createElement("div");
+    caption.className = "gallery-caption";
+    galleryFrame.appendChild(caption);
+
+    function showGallery(index) {
+      const images = Array.from(galleryFrame.querySelectorAll("img"));
+      const thumbs = Array.from(galleryThumbs.querySelectorAll(".mini-photo"));
+      images[galleryIndex].classList.remove("active");
+      thumbs[galleryIndex].classList.remove("active");
+      galleryIndex = index;
+      images[galleryIndex].classList.add("active");
+      thumbs[galleryIndex].classList.add("active");
+      caption.innerHTML = `<strong>${galleryImages[galleryIndex].title}</strong><span>${galleryImages[galleryIndex].copy}</span>`;
+    }
+
+    showGallery(0);
+    setInterval(() => showGallery((galleryIndex + 1) % galleryImages.length), 4800);
+
+    function reviewCard(review) {
+      return `
+        <article class="review-card spotlight">
+          <div class="review-meta">
+            <span>${review[0]}</span>
+            <span class="score">5.0</span>
+          </div>
+          <p>${review[1]}</p>
+        </article>
+      `;
+    }
+
+    document.getElementById("reviewTrackOne").innerHTML = reviews.slice(0, 5).concat(reviews.slice(0, 5)).map(reviewCard).join("");
+    document.getElementById("reviewTrackTwo").innerHTML = reviews.slice(5).concat(reviews.slice(5)).map(reviewCard).join("");
+
+    const faqList = document.getElementById("faqList");
+    faqs.forEach((faq, index) => {
+      const item = document.createElement("article");
+      item.className = "faq-item";
+      item.innerHTML = `
+        <button class="faq-question" type="button" aria-expanded="${index === 0 ? "true" : "false"}">
+          ${faq.q}
+          <span aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>${faq.a}</p>
+        </div>
+      `;
+      faqList.appendChild(item);
+      if (index === 0) item.classList.add("open");
+    });
+
+    function setFaqHeights() {
+      document.querySelectorAll(".faq-item").forEach((item) => {
+        const answer = item.querySelector(".faq-answer");
+        answer.style.maxHeight = item.classList.contains("open") ? answer.scrollHeight + "px" : "0px";
+      });
+    }
+
+    faqList.addEventListener("click", (event) => {
+      const question = event.target.closest(".faq-question");
+      if (!question) return;
+      const item = question.closest(".faq-item");
+      const open = item.classList.toggle("open");
+      question.setAttribute("aria-expanded", String(open));
+      setFaqHeights();
+    });
+
+    setFaqHeights();
+    window.addEventListener("resize", setFaqHeights);
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.16 });
+
+    document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+
+    function onScroll() {
+      document.documentElement.style.setProperty("--scroll-y", String(window.scrollY));
+    }
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    document.querySelectorAll(".spotlight").forEach((card) => {
+      card.addEventListener("pointermove", (event) => {
+        const rect = card.getBoundingClientRect();
+        const x = ((event.clientX - rect.left) / rect.width) * 100;
+        const y = ((event.clientY - rect.top) / rect.height) * 100;
+        card.style.setProperty("--x", x + "%");
+        card.style.setProperty("--y", y + "%");
+      });
+    });
+
+    document.querySelectorAll(".magnetic").forEach((button) => {
+      button.addEventListener("pointermove", (event) => {
+        const rect = button.getBoundingClientRect();
+        const x = event.clientX - rect.left - rect.width / 2;
+        const y = event.clientY - rect.top - rect.height / 2;
+        button.style.transform = `translate(${x * 0.08}px, ${y * 0.12}px)`;
+      });
+      button.addEventListener("pointerleave", () => {
+        button.style.transform = "";
+      });
+    });
+
+    const toggle = document.querySelector(".mobile-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    toggle.addEventListener("click", () => {
+      const open = document.body.classList.toggle("menu-open");
+      toggle.setAttribute("aria-expanded", String(open));
+    });
+
+    navLinks.addEventListener("click", (event) => {
+      if (event.target.closest("a")) {
+        document.body.classList.remove("menu-open");
+        toggle.setAttribute("aria-expanded", "false");
+      }
+    });
+
+  </script>
+</body>
+</html>
