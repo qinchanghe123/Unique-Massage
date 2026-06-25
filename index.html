@@ -209,6 +209,42 @@
       align-items: center;
     }
 
+    .booking-cta-panel {
+      display: grid;
+      align-content: center;
+      min-height: 100%;
+    }
+
+    .booking-cta-panel h3 {
+      color: var(--ivory);
+      margin-bottom: 18px;
+    }
+
+    .booking-cta-panel p {
+      color: rgba(255, 250, 240, 0.68);
+      margin-bottom: 28px;
+    }
+
+    .booking-cta-actions {
+      display: grid;
+      gap: 14px;
+    }
+
+    .booking-cta-actions .btn {
+      width: 100%;
+      min-height: 56px;
+    }
+
+    .booking-main-button {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .booking-secondary-button {
+      border-color: rgba(255, 250, 240, 0.34);
+    }
+
     .reveal {
       opacity: 0;
       transform: translateY(24px);
@@ -1412,14 +1448,7 @@
         </p>
 
         <div class="hero-actions reveal">
-          <button
-            id="Anywhere_button_iframe"
-            class="btn anywhere-book-now-button book-now-theme-button"
-            type="button"
-            data-booking-url="https://uniquemassage.setmore.com"
-            data-new-tab="false">
-            Book Now
-          </button>
+          <a class="btn book-now-theme-button" href="#booking">Book Now</a>
           <a class="btn ghost" href="tel:+19095273788">Click to Call</a>
           <a class="btn ghost" href="sms:+19095273788">Click to Text</a>
         </div>
@@ -1639,8 +1668,8 @@
           <span class="eyebrow">Booking</span>
           <h2>Plan your quiet moment.</h2>
           <p class="lead">
-            Call Unique Massage directly or send a simple request with your preferred time.
-            The form below is a front-end reservation display for easy website use.
+            Book online through Setmore, call Unique Massage directly, or send a quick text
+            with your preferred appointment time.
           </p>
 
           <div class="booking-info">
@@ -1659,60 +1688,28 @@
           </div>
         </div>
 
-        <form class="booking-form reveal" aria-label="Reservation request form">
-          <div class="form-grid">
-            <div class="field">
-              <label for="name">Name</label>
-              <input id="name" name="name" type="text" placeholder="Your name">
-            </div>
-
-            <div class="field">
-              <label for="phone">Phone</label>
-              <input id="phone" name="phone" type="tel" placeholder="Your phone number">
-            </div>
-
-            <div class="field">
-              <label for="service">Service</label>
-              <select id="service" name="service">
-                <option>Body Massage</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label for="duration">Duration</label>
-              <select id="duration" name="duration">
-                <option>30 mins - $40</option>
-                <option>45 mins - $50</option>
-                <option>60 mins - $60</option>
-                <option>90 mins - $90</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label for="time">Preferred Time</label>
-              <input id="time" name="time" type="text" placeholder="Example: Today 6:30 PM">
-            </div>
-
-            <div class="field">
-              <label for="guests">Guests</label>
-              <input id="guests" name="guests" type="text" placeholder="1 guest">
-            </div>
-
-            <div class="field full">
-              <label for="notes">Notes</label>
-              <textarea id="notes" name="notes" placeholder="Share anything that helps us prepare for your visit."></textarea>
-            </div>
-          </div>
-
-          <p class="form-note">
-            This demo form does not submit to a server. For fastest confirmation, please call the store directly.
+        <div class="booking-form booking-cta-panel reveal" aria-label="Booking actions">
+          <span class="eyebrow">Book Online</span>
+          <h3>Choose the easiest way to book.</h3>
+          <p>
+            Use the Book Now button for online scheduling, or reach us directly by phone
+            or text for quick appointment help.
           </p>
 
-          <div class="booking-actions">
-            <a class="btn" href="tel:+19095273788">Click to Call</a>
-            <a class="btn ghost" href="sms:+19095273788">Click to Text</a>
+          <div class="booking-cta-actions">
+            <button
+              id="Anywhere_button_iframe"
+              class="btn anywhere-book-now-button book-now-theme-button booking-main-button"
+              type="button"
+              data-booking-url="https://uniquemassage.setmore.com"
+              data-new-tab="false">
+              Book Now
+            </button>
+
+            <a class="btn ghost booking-secondary-button" href="tel:+19095273788">Click to Call</a>
+            <a class="btn ghost booking-secondary-button" href="sms:+19095273788">Click to Text</a>
           </div>
-        </form>
+        </div>
       </div>
     </section>
 
